@@ -7,17 +7,16 @@ export default class Table extends Component {
 
 
     render() {
-      if(this.props.repo==null)
-        return( <div> <h1>User is not found</h1></div> 
-          
-          
-          );
+      // if(this.props.repo.length===0)
+      //   return( <div> <h1> not repo</h1></div> );
       
-
+// else{
       return (
-        <div>
+        <>
 
 <table style={{width:'100%',   border:"1px solid black"}}>
+<thead>
+
   <tr>
     <th>Number</th>
     <th>Name</th>
@@ -27,17 +26,25 @@ export default class Table extends Component {
     <th>Languge</th>
     <th>Url</th>
   </tr>
+  </thead>
+
+  <tbody>
+
+  
   {this.props.repo.map((item,Key)=>{ 
-    if(Key<=4)
-    {
+    //if(Key<=4)
+    //{
          return  <Item it={item} Key={Key} />
-    }
+   // }
    })}
+
+</tbody>
 
 </table>
 
          
-        </div>
+        </>
       )
     }
+    //}
   }

@@ -18,12 +18,12 @@ dell=()=>{
 
 
     render() {
-        console.log(this.state.search)
+     //   console.log(this.state.search)
       return (
         <div>
             <form>
          <input className="form-control" placeholder="Search"  value={this.state.search} onChange={this.chang} />
-          <button type="button" className="btn btn-info btn-rounded" onClick={this.props.back.bind(this,this.state.search,this.dell)} >search</button>
+          <button type="button" className="btn btn-info btn-rounded" onClick={this.props.back.bind(this,this.state.search,this.dell)}  >search</button>
           </form>
           </div>
       )
